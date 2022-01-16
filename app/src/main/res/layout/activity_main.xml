@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_light"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text1"
+        style="@style/headStyle"
+        android:gravity="center"
+        android:text="@string/welcome"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/mplus1p_regular"
+        android:gravity="center"
+        android:text="@string/introduction"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        style="@style/buttonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="45dp"
+        app:strokeWidth="1dp" />
+</RelativeLayout>

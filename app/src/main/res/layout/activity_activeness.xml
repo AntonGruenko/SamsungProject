@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activenessActivity"
+    android:background="@color/green_light">
+
+    <TextView
+        android:id="@+id/activenessText"
+        style="@style/headStyle"
+        android:text="@string/activeness"/>
+    <RadioGroup
+        android:id="@+id/activenessRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <RadioButton android:id="@+id/activenessVariant1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activeVariant1"
+            android:textSize="20sp"
+            android:fontFamily="@font/mplus1p_regular"
+            android:textColor="@color/black"
+            android:buttonTint="@color/green_dark"/>
+        <RadioButton android:id="@+id/activenessVariant2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activeVariant2"
+            android:textSize="20sp"
+            android:fontFamily="@font/mplus1p_regular"
+            android:textColor="@color/black"
+            android:buttonTint="@color/green_dark" />
+        <RadioButton android:id="@+id/activenessVariant3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activeVariant3"
+            android:textSize="20sp"
+            android:fontFamily="@font/mplus1p_regular"
+            android:textColor="@color/black"
+            android:buttonTint="@color/green_dark"/>
+        <RadioButton android:id="@+id/activenessVariant4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activeVariant4"
+            android:textSize="20sp"
+            android:fontFamily="@font/mplus1p_regular"
+            android:textColor="@color/black"
+            android:buttonTint="@color/green_dark"/>
+        <RadioButton android:id="@+id/activenessVariant5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activeVariant5"
+            android:textSize="20sp"
+            android:fontFamily="@font/mplus1p_regular"
+            android:textColor="@color/black"
+            android:buttonTint="@color/green_dark"/>
+        <RadioButton android:id="@+id/activenessVariant6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activeVariant6"
+            android:textSize="20sp"
+            android:fontFamily="@font/mplus1p_regular"
+            android:textColor="@color/black"
+            android:buttonTint="@color/green_dark"/>
+        <RadioButton android:id="@+id/activenessVariant7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activeVariant7"
+            android:textSize="20sp"
+            android:fontFamily="@font/mplus1p_regular"
+            android:textColor="@color/black"
+            android:buttonTint="@color/green_dark"/>
+    </RadioGroup>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button6"
+        style="@style/buttonStyle"
+        app:cornerRadius="45dp"
+        app:strokeWidth="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

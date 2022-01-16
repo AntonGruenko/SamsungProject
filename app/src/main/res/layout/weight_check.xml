@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".weightActivity"
+    android:background="@color/green_light">
+
+
+    <TextView
+        android:id="@+id/text1"
+        style="@style/headStyle"
+        android:text="Укажите ваш вес" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField_Weight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/black"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_Weight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:hint="Кг"
+            android:fontFamily="@font/mplus1p_regular"
+            android:maxLength="3"
+            android:inputType="numberDecimal"
+            android:textCursorDrawable="@null"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button3"
+        style="@style/buttonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="45dp"
+        app:strokeWidth="1dp" />
+
+
+</RelativeLayout>

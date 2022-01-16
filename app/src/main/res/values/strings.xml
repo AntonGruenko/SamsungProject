@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Project</string>
+
+    <string name="welcome">Добро пожаловать</string>
+    <string name="introduction">Укажите некоторые данные о себе, чтобы мы могли предоставить персональные рекомендации</string>
+    <string name="buttonContinue">Продолжить</string>
+
+
+    <string name="height">Укажите ваш рост</string>
+    <string name="cm">См</string>
+
+    <string name="gender">Укажите ваш пол</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+
+    <string name="userAge">Укажите ваш возраст</string>
+    <string name="age">Лет</string>
+
+    <string name="activeness">Расскажите о своей активности</string>
+    <string name="activeVariant1">Физическая активность отсутствует</string>
+    <string name="activeVariant2">Умеренные тренировки 3 раза в неделю</string>
+    <string name="activeVariant3">Умеренные тренировки 5 раз в неделю</string>
+    <string name="activeVariant4">Интенсивные тренировки 5 раз в неделю</string>
+    <string name="activeVariant5">Ежедневные тренировки</string>
+    <string name="activeVariant6">Ежедневные тренировки по 2 раза в день</string>
+    <string name="activeVariant7">Ежедневные тренировки и физическая работа</string>
+
+    <string name="resultHead">Подведём итоги</string>
+    <string name="resultBody">Ежедневно вам требуется</string>
+    <string name="calories">Калории</string>
+    <string name="caloriesNum">0</string>
+    <string name="proteins">Белки</string>
+    <string name="proteinsNum">0</string>
+    <string name="fats">Жиры</string>
+    <string name="fatsNum">0</string>
+    <string name="carbohydrates">Углеводы</string>
+    <string name="carbohydratesNum">0</string>
+    <string name="glasses">Стаканы воды</string>
+    <string name="glassesNum">0</string>
+</resources>
