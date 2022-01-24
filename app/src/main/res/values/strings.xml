@@ -4,6 +4,7 @@
     <string name="welcome">Добро пожаловать</string>
     <string name="introduction">Укажите некоторые данные о себе, чтобы мы могли предоставить персональные рекомендации</string>
     <string name="buttonContinue">Продолжить</string>
+    <string name="dataDisclaimer">Ваши данные используются только для вычисления рекомендаций</string>
 
 
     <string name="height">Укажите ваш рост</string>
@@ -27,7 +28,7 @@
 
     <string name="resultHead">Подведём итоги</string>
     <string name="resultBody">Ежедневно вам требуется</string>
-    <string name="calories">Калории</string>
+    <string name="calories">Килокалории</string>
     <string name="caloriesNum">0</string>
     <string name="proteins">Белки</string>
     <string name="proteinsNum">0</string>
@@ -37,4 +38,15 @@
     <string name="carbohydratesNum">0</string>
     <string name="glasses">Стаканы воды</string>
     <string name="glassesNum">0</string>
+
+    <string name="date">00/00/0000</string>
+    <string name="caloriesRemain">0000</string>
+    <string name="caloriesRemainText">Килокалорий осталось</string>
+    <string name="breakfast">Завтрак</string>
+    <string name="lunch">Обед</string>
+    <string name="diner">Ужин</string>
+    <string name="snack">Перекус</string>
+    <string name="KcalBreakfast">Ккал</string>
+    <string name="Back">Назад</string>
+    <string name="WhatDidYouEat">Что вы съели?</string>
 </resources>

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".weightActivity"
-    android:background="@color/green_light">
+    android:background="@color/green_light"
+    tools:context=".weightActivity">
 
 
     <TextView
@@ -15,29 +15,31 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filledTextField_Weight"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
 
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeWidth="1dp"
+        android:layout_centerVertical="true"
         app:boxStrokeColor="@color/black"
-        app:hintTextColor="@color/black"
-        >
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_Weight"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mplus1p_regular"
             android:gravity="left"
             android:hint="Кг"
-            android:fontFamily="@font/mplus1p_regular"
-            android:maxLength="3"
             android:inputType="numberDecimal"
-            android:textCursorDrawable="@null"
-            />
+            android:maxLength="3"
+            android:textCursorDrawable="@null" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        style="@style/disclaimerStyle"
+        android:layout_above="@+id/button3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"

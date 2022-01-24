@@ -21,7 +21,7 @@ public class weightActivity extends Activity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!(editWeight.getText().toString().equals(""))
+                if (!(editWeight.getText().toString().equals(""))
                         && Integer.parseInt(editWeight.getText().toString()) > 25
                         && Integer.parseInt(editWeight.getText().toString()) < 200) {
                     String res = editWeight.getText().toString();
@@ -29,7 +29,7 @@ public class weightActivity extends Activity {
                     intent.putExtra("height", userHeight);
                     intent.putExtra("weight", res);
                     startActivity(intent);
-                }else {
+                } else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Введите корректное значение", Toast.LENGTH_SHORT);
                     toast.show();
                 }

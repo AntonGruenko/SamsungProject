@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ageActivity extends Activity{
+public class ageActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class ageActivity extends Activity{
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!(editAge.getText().toString().equals(""))
+                if (!(editAge.getText().toString().equals(""))
                         && Integer.parseInt(editAge.getText().toString()) > 0
                         && Integer.parseInt(editAge.getText().toString()) < 105) {
                     String res = editAge.getText().toString();
@@ -35,7 +35,7 @@ public class ageActivity extends Activity{
                     intent.putExtra("gender", userGender);
                     intent.putExtra("age", res);
                     startActivity(intent);
-                }else {
+                } else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Введите корректное значение", Toast.LENGTH_SHORT);
                     toast.show();
                 }

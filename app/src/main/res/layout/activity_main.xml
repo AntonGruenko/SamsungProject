@@ -11,7 +11,7 @@
         android:id="@+id/text1"
         style="@style/headStyle"
         android:gravity="center"
-        android:text="@string/welcome"/>
+        android:text="@string/welcome" />
 
     <TextView
         android:id="@+id/text2"

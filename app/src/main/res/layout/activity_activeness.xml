@@ -75,6 +75,10 @@
             android:textColor="@color/black"
             android:buttonTint="@color/green_dark"/>
     </RadioGroup>
+
+    <TextView
+        style="@style/disclaimerStyle"
+        android:layout_above="@+id/button6" />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button6"
         style="@style/buttonStyle"

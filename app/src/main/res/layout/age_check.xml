@@ -36,6 +36,10 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        style="@style/disclaimerStyle"
+        android:layout_above="@+id/button5" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button5"
         style="@style/buttonStyle"

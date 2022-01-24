@@ -11,8 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".SnackActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DinerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LunchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BreakfastActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
             android:name=".activenessActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".resultActivity"
             android:exported="true" />

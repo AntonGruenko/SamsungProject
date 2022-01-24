@@ -46,18 +46,19 @@
         android:text="@string/caloriesNum"
         android:textColor="@color/black"
         android:textSize="20sp" />
+
     <TextView
         android:id="@+id/proteins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/fats"
         android:layout_below="@id/caloriesNum"
         android:layout_marginTop="32dp"
+        android:layout_toLeftOf="@id/fats"
+        android:fontFamily="@font/mplus1p_regular"
+        android:gravity="center"
         android:text="@string/proteins"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:fontFamily="@font/mplus1p_regular"/>
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/fats"
         android:layout_width="wrap_content"
@@ -139,6 +140,7 @@
         android:textSize="20sp"
         android:fontFamily="@font/mplus1p_medium"/>
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/button7"
         style="@style/buttonStyle"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
