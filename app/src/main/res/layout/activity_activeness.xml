@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activenessActivity"
+    tools:context=".ActivenessActivity"
     android:background="@color/green_light">
 
     <TextView
@@ -76,9 +76,6 @@
             android:buttonTint="@color/green_dark"/>
     </RadioGroup>
 
-    <TextView
-        style="@style/disclaimerStyle"
-        android:layout_above="@+id/button6" />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button6"
         style="@style/buttonStyle"

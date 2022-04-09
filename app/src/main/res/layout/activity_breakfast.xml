@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="@color/green_light"
     tools:context=".BreakfastActivity">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:backgroundTint="@color/green_dark"
+        app:cornerRadius="32dp"
+        app:icon="@drawable/ic_baseline_keyboard_arrow_left_24"
+        app:iconTint="@color/white" />
+
 
     <TextView
         style="@style/headStyle"
@@ -24,7 +35,7 @@
         app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/breakfastList"
+            android:id="@+id/editBreakfastList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -32,7 +43,7 @@
             android:cursorVisible="false"
             android:fontFamily="@font/mplus1p_regular"
             android:gravity="left"
-            android:hint="@string/WhatDidYouEat"
+            android:hint="@string/whatDidYouEat"
             android:inputType="text"
             android:textColor="@color/black"
             android:textColorHint="@color/black" />
@@ -51,13 +62,13 @@
         app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/breakfastKcal"
+            android:id="@+id/editKcal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:cursorVisible="false"
             android:fontFamily="@font/mplus1p_regular"
             android:gravity="left"
-            android:hint="@string/KcalBreakfast"
+            android:hint="@string/kcalBreakfast"
             android:inputType="numberDecimal"
             android:maxLength="3"
             android:textColor="@color/black"
@@ -78,7 +89,7 @@
         app:boxStrokeWidth="1dp"
         app:hintTextColor="@color/black">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/breakfastProteins"
+            android:id="@+id/editProteins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:cursorVisible="false"
@@ -103,7 +114,7 @@
         app:boxStrokeWidth="1dp"
         app:hintTextColor="@color/black">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/breakfastFats"
+            android:id="@+id/editFats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:cursorVisible="false"
@@ -130,7 +141,7 @@
         app:boxStrokeWidth="1dp"
         app:hintTextColor="@color/black">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/breakfastCarbohydrates"
+            android:id="@+id/editCarbohydrates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:cursorVisible="false"
@@ -145,11 +156,11 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/backButton"
+        android:id="@+id/enterButton"
         style="@style/buttonStyle"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/Back"
+        android:text="@string/save"
         app:cornerRadius="45dp" />
 
 

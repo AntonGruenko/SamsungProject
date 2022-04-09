@@ -8,15 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class weightActivity extends Activity {
+public class WeightActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weight_check);
         Button button3 = (Button) findViewById(R.id.button3);
         EditText editWeight = (EditText) findViewById(R.id.edit_Weight);
-        Intent intent = getIntent();
-        String userHeight = intent.getStringExtra("height");
+        Bundle bundle = getIntent().getExtras();
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,12 +24,12 @@ public class weightActivity extends Activity {
                         && Integer.parseInt(editWeight.getText().toString()) > 25
                         && Integer.parseInt(editWeight.getText().toString()) < 200) {
                     String res = editWeight.getText().toString();
-                    Intent intent = new Intent(weightActivity.this, genderActivity.class);
-                    intent.putExtra("height", userHeight);
-                    intent.putExtra("weight", res);
+                    bundle.putInt("weight", Integer.parseInt(res));
+                    Intent intent = new Intent(WeightActivity.this, GenderActivity.class);
+                    intent.putExtras(bundle);
                     startActivity(intent);
                 } else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Введите корректное значение", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.enterCorrectValue, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }

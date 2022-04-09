@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_light"
-    tools:context=".weightActivity">
+    tools:context=".WeightActivity">
 
 
     <TextView
         android:id="@+id/text1"
         style="@style/headStyle"
-        android:text="Укажите ваш вес" />
+        android:text="@string/ennter_your_weight" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filledTextField_Weight"
@@ -31,15 +31,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/mplus1p_regular"
             android:gravity="left"
-            android:hint="Кг"
+            android:hint="@string/kg"
             android:inputType="numberDecimal"
             android:maxLength="3"
             android:textCursorDrawable="@null" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        style="@style/disclaimerStyle"
-        android:layout_above="@+id/button3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"

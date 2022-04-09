@@ -7,19 +7,22 @@
         <entry key="..\:/Project/app/src/main/res/layout/activity_activeness.xml" value="0.20625" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_breakfast.xml" value="0.3572916666666667" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_diner.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/app/src/main/res/layout/activity_dinner.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_height.xml" value="0.3619791666666667" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_lunch.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/activity_result.xml" value="0.33" />
-        <entry key="..\:/Project/app/src/main/res/layout/activity_snack.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/app/src/main/res/layout/activity_snack.xml" value="0.33" />
+        <entry key="..\:/Project/app/src/main/res/layout/activity_start.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/age_check.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/app/src/main/res/layout/fragment_auth.xml" value="0.35260416666666666" />
         <entry key="..\:/Project/app/src/main/res/layout/gender_check.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/weight_check.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

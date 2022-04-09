@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".heightActivity"
+    tools:context=".HeightActivity"
     android:background="@color/green_light">
 
     <TextView
@@ -35,10 +35,6 @@
             android:textCursorDrawable="@null"
             />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        style="@style/disclaimerStyle"
-        android:layout_above="@+id/button2" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"

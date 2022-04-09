@@ -1,12 +1,9 @@
 <resources>
-    <string name="app_name">Project</string>
+    <string name="app_name">MyDiet</string>
 
     <string name="welcome">Добро пожаловать</string>
     <string name="introduction">Укажите некоторые данные о себе, чтобы мы могли предоставить персональные рекомендации</string>
     <string name="buttonContinue">Продолжить</string>
-    <string name="dataDisclaimer">Ваши данные используются только для вычисления рекомендаций</string>
-
-
     <string name="height">Укажите ваш рост</string>
     <string name="cm">См</string>
 
@@ -44,9 +41,21 @@
     <string name="caloriesRemainText">Килокалорий осталось</string>
     <string name="breakfast">Завтрак</string>
     <string name="lunch">Обед</string>
-    <string name="diner">Ужин</string>
+    <string name="dinner">Ужин</string>
     <string name="snack">Перекус</string>
-    <string name="KcalBreakfast">Ккал</string>
-    <string name="Back">Назад</string>
-    <string name="WhatDidYouEat">Что вы съели?</string>
+    <string name="kcalBreakfast">Ккал</string>
+    <string name="back">Назад</string>
+    <string name="whatDidYouEat">Что вы съели?</string>
+    <string name="enterValue">Введите значение</string>
+    <string name="enterCorrectValue">Введите корректное значение</string>
+    <string name="save">Сохранить</string>
+    <string name="kcalExcess">Килокалорий превышено</string>
+    <string name="excess">превышение</string>
+
+    <string name="timeToHaveBreakfast">Время для завтрака!</string>
+    <string name="dontForgetToEnerYourData">Не забудьте ввести данные</string>
+    <string name="timeToHaveLunch">Время для обеда!</string>
+    <string name="imeToHaveDinner">Время для ужина!</string>
+    <string name="ennter_your_weight">Укажите ваш вес</string>
+    <string name="kg">кг</string>
 </resources>

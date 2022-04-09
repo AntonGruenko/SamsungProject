@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project">
-
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SET_ALARM"/>
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -14,7 +15,7 @@
             android:name=".SnackActivity"
             android:exported="true" />
         <activity
-            android:name=".DinerActivity"
+            android:name=".DinnerActivity"
             android:exported="true" />
         <activity
             android:name=".LunchActivity"
@@ -23,19 +24,19 @@
             android:name=".BreakfastActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".StartActivity"
             android:exported="true" />
         <activity
-            android:name=".activenessActivity"
+            android:name=".ActivenessActivity"
             android:exported="true" />
         <activity
-            android:name=".resultActivity"
+            android:name=".ResultActivity"
             android:exported="true" />
         <activity
-            android:name=".heightActivity"
+            android:name=".HeightActivity"
             android:exported="true" />
         <activity
-            android:name=".weightActivity"
+            android:name=".WeightActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
@@ -47,11 +48,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".genderActivity"
+            android:name=".GenderActivity"
             android:exported="true" />
         <activity
-            android:name=".ageActivity"
+            android:name=".AgeActivity"
             android:exported="true" />
+        <receiver
+            android:name=".BreakfastAlarmReceiver"
+            android:enabled="true">
+        </receiver>
+        <receiver
+            android:name=".LunchAlarmReceiver"
+            android:enabled="true">
+        </receiver>
+        <receiver
+            android:name=".DinnerAlarmReceiver"
+            android:enabled="true">
+        </receiver>
+        <receiver
+            android:name=".UpdateReceiver"
+            android:enabled="true">
+        </receiver>
+
     </application>
 
 </manifest>
