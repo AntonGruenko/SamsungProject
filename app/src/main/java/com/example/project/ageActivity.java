@@ -12,7 +12,7 @@ public class AgeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.age_check);
+        setContentView(R.layout.activity_age);
 
         Button button5 = (Button) findViewById(R.id.button5);
         EditText editAge = (EditText) findViewById(R.id.edit_Age);

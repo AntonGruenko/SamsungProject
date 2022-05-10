@@ -12,7 +12,7 @@ public class WeightActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.weight_check);
+        setContentView(R.layout.activity_weight);
         Button button3 = (Button) findViewById(R.id.button3);
         EditText editWeight = (EditText) findViewById(R.id.edit_Weight);
         Bundle bundle = getIntent().getExtras();

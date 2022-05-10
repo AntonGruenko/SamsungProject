@@ -14,7 +14,7 @@ public class GenderActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gender_check);
+        setContentView(R.layout.activity_gender);
         RadioGroup genderRadio = (RadioGroup)findViewById(R.id.genderRadio);
         Button button4 = (Button) findViewById(R.id.button4);
         Bundle bundle = getIntent().getExtras();
