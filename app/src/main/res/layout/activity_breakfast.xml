@@ -19,36 +19,73 @@
 
 
     <TextView
-        style="@style/headStyle"
-        android:text="@string/breakfast" />
+        android:id="@+id/mealHeadline"
+        style="@style/headStyle" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/WhatDidYouEatBox"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-
         android:layout_centerVertical="true"
+        android:layout_marginBottom="32dp"
+        app:boxStrokeColor="@color/black"
+        android:layout_toRightOf="@id/CoefficientBox"
+        android:layout_alignParentRight="true"
+        app:endIconTint="@color/green_dark"
+        app:boxStrokeWidth="1dp"
+        app:hintTextColor="@color/black">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/autocompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="false"
+            android:backgroundTint="@color/green_dark"
+            android:fontFamily="@font/mplus1p_regular"
+            android:gravity="left"
+            android:hint="@string/whatDidYouEat"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CoefficientBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidth="1dp"
         app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editBreakfastList"
+            android:id="@+id/editCoefficient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="32dp"
             android:cursorVisible="false"
             android:fontFamily="@font/mplus1p_regular"
             android:gravity="left"
-            android:hint="@string/whatDidYouEat"
-            android:inputType="text"
+            android:hint="@string/gramm"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
             android:textColor="@color/black"
             android:textColorHint="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/youHaveEatenText"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_above="@id/KcalBox"
+        android:layout_below="@id/CoefficientBox"
+        android:fontFamily="@font/mplus1p_regular"
+        android:singleLine="true"
+        android:text="@string/you_have_eaten"
+        android:textSize="16sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/KcalBox"
@@ -70,7 +107,7 @@
             android:gravity="left"
             android:hint="@string/kcalBreakfast"
             android:inputType="numberDecimal"
-            android:maxLength="3"
+            android:maxLength="4"
             android:textColor="@color/black"
             android:textColorHint="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>

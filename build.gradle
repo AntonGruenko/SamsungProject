@@ -12,6 +12,13 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+    }
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

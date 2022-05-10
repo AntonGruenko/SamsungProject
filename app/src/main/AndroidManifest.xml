@@ -4,22 +4,13 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.SET_ALARM"/>
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
-        <activity
-            android:name=".SnackActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DinnerActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LunchActivity"
-            android:exported="true" />
         <activity
             android:name=".BreakfastActivity"
             android:exported="true" />
@@ -53,18 +44,6 @@
         <activity
             android:name=".AgeActivity"
             android:exported="true" />
-        <receiver
-            android:name=".BreakfastAlarmReceiver"
-            android:enabled="true">
-        </receiver>
-        <receiver
-            android:name=".LunchAlarmReceiver"
-            android:enabled="true">
-        </receiver>
-        <receiver
-            android:name=".DinnerAlarmReceiver"
-            android:enabled="true">
-        </receiver>
         <receiver
             android:name=".UpdateReceiver"
             android:enabled="true">

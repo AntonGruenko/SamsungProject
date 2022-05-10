@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_light"
+    tools:context=".UserFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/statistics"
+            style="@style/headStyle"
+            android:layout_height="wrap_content"
+            android:text="@string/statistics" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:layout_below="@id/statistics"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp">
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+    <TextView
+        android:id="@+id/averageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chart"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/mplus1p_regular"
+        android:gravity="center"
+        android:text="@string/average_kcal"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/average"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/averageText"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/mplus1p_medium"
+        android:gravity="center"
+        android:text="@string/caloriesNum"
+        android:textColor="@color/black"
+        android:textSize="32sp" />
+    </RelativeLayout>
+
+
+</ScrollView>

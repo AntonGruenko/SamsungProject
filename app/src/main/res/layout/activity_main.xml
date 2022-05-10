@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,212 +7,23 @@
     android:background="@color/green_light"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav">
+    </FrameLayout>
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_alignParentLeft="true"
-            android:backgroundTint="@color/green_dark"
-            app:cornerRadius="32dp"
-            app:icon="@drawable/ic_baseline_keyboard_arrow_left_24"
-            app:iconTint="@color/white" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green_dark"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_nav_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/date"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_alignParentRight="true"
-            android:backgroundTint="@color/green_dark"
-            app:cornerRadius="90dp"
-            app:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
-            app:iconTint="@color/white" />
-
-        <TextView
-            android:id="@+id/KcalRemain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/caloriesRemain"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/mplus1p_medium"
-            android:gravity="center"
-            android:text="@string/caloriesRemain"
-            android:textColor="@color/black"
-            android:textSize="34sp" />
-
-        <TextView
-            android:id="@+id/caloriesRemain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/date"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="64dp"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/caloriesRemainText"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/proteins"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/KcalRemain"
-            android:layout_marginTop="16dp"
-            android:layout_toLeftOf="@id/fats"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/proteins"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/fats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/KcalRemain"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/fats"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/carbohydrates"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/KcalRemain"
-            android:layout_marginTop="16dp"
-            android:layout_toRightOf="@id/fats"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/carbohydrates"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/proteinsRemain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/breakfastButton"
-            android:layout_marginStart="-96dp"
-            android:layout_marginTop="-96dp"
-            android:layout_marginEnd="-96dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="-96dp"
-            android:layout_toLeftOf="@id/fatsRemain"
-            android:fontFamily="@font/mplus1p_medium"
-            android:gravity="center"
-            android:text="@string/proteinsNum"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/fatsRemain"
-            android:layout_width="64dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/breakfastButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="-96dp"
-            android:fontFamily="@font/mplus1p_medium"
-            android:gravity="center"
-            android:text="@string/fatsNum"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-
-        <TextView
-            android:id="@+id/carbohydratesRemain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/breakfastButton"
-            android:layout_marginBottom="-96dp"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/fatsRemain"
-            android:fontFamily="@font/mplus1p_medium"
-            android:gravity="center"
-            android:text="@string/carbohydratesNum"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/breakfastButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/KcalRemain"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="128dp"
-            android:backgroundTint="@color/green_dark"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/breakfast"
-            android:textSize="24sp"
-            app:cornerRadius="45dp"
-            app:icon="@drawable/ic_baseline_local_dining_24" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/lunchButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/breakfastButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/green_dark"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/lunch"
-            android:textSize="24sp"
-            app:cornerRadius="45dp"
-            app:icon="@drawable/ic_baseline_local_dining_24" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/dinnerButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lunchButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/green_dark"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/dinner"
-            android:textSize="24sp"
-            app:cornerRadius="45dp"
-            app:icon="@drawable/ic_baseline_local_dining_24" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/snackButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/dinnerButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/green_dark"
-            android:fontFamily="@font/mplus1p_regular"
-            android:gravity="center"
-            android:text="@string/snack"
-            android:textSize="24sp"
-            app:cornerRadius="45dp"
-            app:icon="@drawable/ic_baseline_local_dining_24" />
-
-    </RelativeLayout>
-
-</ScrollView>
+</RelativeLayout>

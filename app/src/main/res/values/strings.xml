@@ -57,5 +57,15 @@
     <string name="timeToHaveLunch">Время для обеда!</string>
     <string name="imeToHaveDinner">Время для ужина!</string>
     <string name="ennter_your_weight">Укажите ваш вес</string>
-    <string name="kg">кг</string>
+    <string name="kg">Кг</string>
+    <string name="me">Я</string>
+    <string name="eating">ПИТАНИЕ</string>
+    <string name="statistics">Статистика</string>
+    <string name="your_limit">Ваша норма</string>
+    <string name="average_kcal">Среднее потребление калорий</string>
+    <string name="gramm">Грамм</string>
+    <string name="_00_00">00/00</string>
+    <string name="you_have_eaten">Вы съели:</string>
+
+    <string name="days">Дни</string>
 </resources>

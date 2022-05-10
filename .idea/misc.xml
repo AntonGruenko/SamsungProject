@@ -17,8 +17,11 @@
         <entry key="..\:/Project/app/src/main/res/layout/activity_start.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/age_check.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/fragment_auth.xml" value="0.35260416666666666" />
+        <entry key="..\:/Project/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/app/src/main/res/layout/fragment_user.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/gender_check.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/app/src/main/res/layout/weight_check.xml" value="0.36666666666666664" />
+        <entry key="..\:/Project/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
       </map>
     </option>
   </component>
