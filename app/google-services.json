@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1062399043495",
+    "project_id": "samsungproject-6710a",
+    "storage_bucket": "samsungproject-6710a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062399043495:android:7d31636c3ee561e30bb882",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062399043495-v8pf7fr49ns4gjb9qevm7v2dsgmdiqju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq3whADjJymcXYypL0Zhl35SBp7t1XavA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062399043495-v8pf7fr49ns4gjb9qevm7v2dsgmdiqju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
