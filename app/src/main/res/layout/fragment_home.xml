@@ -32,16 +32,16 @@
         android:textColor="@color/black"
         android:textSize="24sp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/forwardButton"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_alignParentRight="true"
-        android:backgroundTint="@color/green_dark"
-        app:cornerRadius="90dp"
-        app:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
-        app:iconTint="@color/white" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/forwardButton"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/green_dark"
+            app:cornerRadius="90dp"
+            app:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:iconTint="@color/white" />
 
         <TextView
             android:id="@+id/KcalRemain"

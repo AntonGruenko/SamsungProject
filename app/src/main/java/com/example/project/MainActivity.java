@@ -1,10 +1,22 @@
 package com.example.project;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Date;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -40,6 +52,8 @@ public class MainActivity extends FragmentActivity {
         helper = new Database.OpenHelper(this);
         db = new Database(this);
 
+        changeDateIfNeeded();
+
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnItemSelectedListener(
                 new NavigationBarView.OnItemSelectedListener() {
@@ -61,6 +75,31 @@ public class MainActivity extends FragmentActivity {
                     }
                 });
 
+        /*createNotificationChannel();
+
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+
+        if (calendar.before(Calendar.getInstance())) {
+            calendar.add(Calendar.DAY_OF_YEAR, 1);
+        }
+
+        Intent intent = new Intent(MainActivity.this, AlarmReceiver.class);
+        intent.putExtra("notificationCode", 2);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        sendBroadcast(intent);
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        if (Build.VERSION.SDK_INT >= 23) {
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        } else if (Build.VERSION.SDK_INT >= 19) {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        } else {
+            alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        }*/
     }
 
     private boolean changeFragment(Fragment fragment) {
@@ -75,28 +114,46 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-    /*private void setDailyReset() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 20);
-        calendar.set(Calendar.MINUTE, 15);
-        if (calendar.before(Calendar.getInstance())) {
-            calendar.add(Calendar.DATE, 1);
+    /*private void createNotificationChannel() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "MyDietChannel";
+            String description = "channel";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("Notification", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
         }
-        Intent intent = new Intent(this, UpdateReceiver.class);
-        intent.putExtra("triggerTime", calendar);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
-        AlarmManager am = (AlarmManager) this.getSystemService(this.ALARM_SERVICE);
-        if (Build.VERSION.SDK_INT >= 23) {
-            am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,
-                    calendar.getTimeInMillis(), pendingIntent);
-        } else if (Build.VERSION.SDK_INT >= 19) {
-            am.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-        } else {
-            am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-        }*/
+    }*/
+
+    private void changeDateIfNeeded() {
+        SharedPreferences sp = getSharedPreferences(SETTINGS, MODE_PRIVATE);
+        SharedPreferences.Editor e = sp.edit();
+        long date = sp.getLong("date", 0);
+        Calendar currentCalendar = Calendar.getInstance();
+        Calendar oldCalendar = Calendar.getInstance();
+        oldCalendar.setTimeInMillis(date);
+
+        currentCalendar.set(Calendar.HOUR_OF_DAY, 0);
+        currentCalendar.set(Calendar.MINUTE, 0);
+        currentCalendar.set(Calendar.SECOND, 0);
+        currentCalendar.set(Calendar.MILLISECOND, 0);
+        oldCalendar.set(Calendar.HOUR_OF_DAY, 0);
+        oldCalendar.set(Calendar.MINUTE, 0);
+        oldCalendar.set(Calendar.SECOND, 0);
+        oldCalendar.set(Calendar.MILLISECOND, 0);
+
+        long period = currentCalendar.getTimeInMillis() - oldCalendar.getTimeInMillis();
+        period /= UserFragment.getDayInMillis();
+        date = date + period * UserFragment.getDayInMillis();
+        e.putLong("date", date);
+        e.commit();
+
+    }
 
 }
 
 
 
-    
+

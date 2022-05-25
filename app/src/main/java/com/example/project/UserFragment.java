@@ -139,4 +139,7 @@ public class UserFragment extends Fragment {
         return res;
     }
 
+    public static long getDayInMillis() {
+        return DAY_IN_MILLIS;
+    }
 }

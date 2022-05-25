@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_light"
-    tools:context=".BreakfastActivity">
+    tools:context=".MealActivity">
     <com.google.android.material.button.MaterialButton
         android:id="@+id/backButton"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -190,6 +190,22 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/advice_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/WhatDidYouEatBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/green_light"
+        android:fontFamily="@font/mplus1p_regular"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:iconTint="@color/green_dark"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_baseline_keyboard_arrow_right_24"
+        app:iconGravity="end" />
 
 
     <com.google.android.material.button.MaterialButton

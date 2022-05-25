@@ -20,17 +20,21 @@ import android.widget.Toast;
 import com.example.project.data.Database;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
 
-public class BreakfastActivity extends Activity {
+public class MealActivity extends Activity {
     private static final String SETTINGS = "SharedPreferences";
     private ProductsDatabaseHelper dBHelper;
     private SQLiteDatabase productsDb;
     private Database db;
+    private String[] adviceList;
+    Button adviceButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_breakfast);
+        setContentView(R.layout.activity_meal);
 
         TextView mealHeadline = (TextView) findViewById(R.id.mealHeadline);
         AutoCompleteTextView dbDropDownMenu = (AutoCompleteTextView) findViewById(R.id.autocompleteTextView);
@@ -42,19 +46,27 @@ public class BreakfastActivity extends Activity {
         TextView youHaveEatenText = (TextView) findViewById(R.id.youHaveEatenText);
         Button enterButton = (Button) findViewById(R.id.enterButton);
         Button backButton = (Button) findViewById(R.id.backButton);
+        adviceButton = (Button) findViewById(R.id.advice_button);
+
+        adviceList = getResources().getStringArray(R.array.advices);
+
 
         switch (getIntent().getIntExtra("path", 4)){
             case(1):
                 mealHeadline.setText(R.string.breakfast);
+                adviceButton.setText(String.format("%s \n %s", getString(R.string.advice), adviceList[0]));
                 break;
             case(2):
                 mealHeadline.setText(R.string.lunch);
+                adviceButton.setText(String.format("%s \n %s", getString(R.string.advice), adviceList[1]));
                 break;
             case(3):
                 mealHeadline.setText(R.string.dinner);
+                adviceButton.setText(String.format("%s \n %s", getString(R.string.advice), adviceList[2]));
                 break;
             case(4):
                 mealHeadline.setText(R.string.snack);
+                adviceButton.setText(String.format("%s \n %s", getString(R.string.advice), adviceList[3]));
                 break;
         }
 
@@ -135,7 +147,7 @@ public class BreakfastActivity extends Activity {
                     int breakfastProteins = Integer.parseInt(String.valueOf(editBreakfastProteins.getText()));
                     int breakfastFats= Integer.parseInt(String.valueOf(editBreakfastFats.getText()));
                     int breakfastCarbohydrates = Integer.parseInt(String.valueOf(editBreakfastCarbohydrates.getText()));
-                    Intent intent = new Intent(BreakfastActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MealActivity.this, MainActivity.class);
 
                     long date = sp.getLong("date", 0);
 
@@ -196,8 +208,17 @@ public class BreakfastActivity extends Activity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Intent backIntent = new Intent(BreakfastActivity.this, MainActivity.class);
+                Intent backIntent = new Intent(MealActivity.this, MainActivity.class);
                 startActivity(backIntent);
+            }
+        });
+
+        adviceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Random generator = new Random();
+                int index = generator.nextInt(adviceList.length);
+                adviceButton.setText(String.format("%s \n %s", getString(R.string.advice), adviceList[index]));
             }
         });
     }

@@ -101,22 +101,22 @@ public class HomeFragment extends Fragment {
         waterButton.setText(String.format("%s/%s", db.select(date).getGlasses(), sp.getInt("glasses", 0)));
 
         breakfastButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getActivity(), BreakfastActivity.class);
+            Intent intent = new Intent(getActivity(), MealActivity.class);
             intent.putExtra("path", 1);
             startActivity(intent);
         });
         lunchButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getActivity(), BreakfastActivity.class);
+            Intent intent = new Intent(getActivity(), MealActivity.class);
             intent.putExtra("path", 2);
             startActivity(intent);
         });
         dinnerButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getActivity(), BreakfastActivity.class);
+            Intent intent = new Intent(getActivity(), MealActivity.class);
             intent.putExtra("path", 3);
             startActivity(intent);
         });
         snackButton.setOnClickListener(view ->{
-            Intent intent = new Intent(getActivity(), BreakfastActivity.class);
+            Intent intent = new Intent(getActivity(), MealActivity.class);
             intent.putExtra("path", 4);
             startActivity(intent);
         });
