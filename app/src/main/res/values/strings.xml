@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">MyDiet</string>
+    <string name="app_name" translatable="false">MyDiet</string>
 
-    <string name="welcome">Добро пожаловать</string>
+    <string name="welcome">Добро пожаловать!</string>
     <string name="introduction">Укажите некоторые данные о себе, чтобы мы могли предоставить персональные рекомендации</string>
     <string name="buttonContinue">Продолжить</string>
     <string name="height">Укажите ваш рост</string>
@@ -13,6 +13,7 @@
 
     <string name="userAge">Укажите ваш возраст</string>
     <string name="age">Лет</string>
+    <string name="enterYourWeight">Введите свой вес</string>
 
     <string name="activeness">Расскажите о своей активности</string>
     <string name="activeVariant1">Физическая активность отсутствует</string>
@@ -26,18 +27,11 @@
     <string name="resultHead">Подведём итоги</string>
     <string name="resultBody">Ежедневно вам требуется</string>
     <string name="calories">Килокалории</string>
-    <string name="caloriesNum">0</string>
     <string name="proteins">Белки</string>
-    <string name="proteinsNum">0</string>
     <string name="fats">Жиры</string>
-    <string name="fatsNum">0</string>
     <string name="carbohydrates">Углеводы</string>
-    <string name="carbohydratesNum">0</string>
     <string name="glasses">Стаканы воды</string>
-    <string name="glassesNum">0</string>
 
-    <string name="date">00/00/0000</string>
-    <string name="caloriesRemain">0000</string>
     <string name="caloriesRemainText">Килокалорий осталось</string>
     <string name="breakfast">Завтрак</string>
     <string name="lunch">Обед</string>
@@ -53,32 +47,47 @@
     <string name="excess">превышение</string>
 
     <string name="timeToHaveBreakfast">Время для завтрака!</string>
-    <string name="dontForgetToEnerYourData">Не забудьте ввести данные</string>
+    <string name="dontForgetToEnterYourData">Не забудьте ввести данные</string>
     <string name="timeToHaveLunch">Время для обеда!</string>
     <string name="timeToHaveDinner">Время для ужина!</string>
-    <string name="ennter_your_weight">Укажите ваш вес</string>
+    <string name="enter_your_weight">Укажите ваш вес</string>
     <string name="kg">Кг</string>
     <string name="me">Я</string>
     <string name="eating">ПИТАНИЕ</string>
     <string name="statistics">Статистика</string>
     <string name="your_limit">Ваша норма</string>
     <string name="average_kcal">Среднее потребление калорий</string>
-    <string name="gramm">Грамм</string>
-    <string name="_00_00">00/00</string>
+    <string name="gram">Грамм</string>
     <string name="you_have_eaten">Вы съели:</string>
     <string name="days">Дни</string>
     <string name="advice">Совет:</string>
+    <string name="EnterCorrectValue">Введите корректное значение</string>
+    <string name="ChooseYourGender">Выберите свой пол</string>
 
     <array name="advices">
-        <item>На завтрак рекомендуется потреблять 25% от суточной нормы калорий</item>
-        <item>На обед рекомендуется потреблять 35% от суточной нормы калорий</item>
-        <item>На ужин рекомендуется потреблять 15% от суточной нормы калорий</item>
-        <item>На перекусы должно приходиться 25% от суточной нормы калорий</item>
-        <item>Старайтесь включать в рацион больше овощей и фруктов</item>
-        <item>Пейте больше воды</item>
-        <item>Промежутки между приёмами пищи должны составлять 4-5 часов</item>
-        <item>В течение дня должно быть запланировано 2 перекуса</item>
-        <item>Вечером нужно потреблять меньше углеводов</item>
-        <item>Постарайтесь отказаться от сладкого</item>
+        <item>@string/advice1</item>
+        <item>@string/advice2</item>
+        <item>@string/advice3</item>
+        <item>@string/advice4</item>
+        <item>@string/advice5</item>
+        <item>@string/advice6</item>
+        <item>@string/advice7</item>
+        <item>@string/advice8</item>
+        <item>@string/advice9</item>
+        <item>@string/advice10</item>
     </array>
+
+    <string name="advice1">На завтрак рекомендуется потреблять 25% от суточной нормы калорий</string>
+    <string name="advice2">На обед рекомендуется потреблять 35% от суточной нормы калорий</string>
+    <string name="advice3">На ужин рекомендуется потреблять 15% от суточной нормы калорий</string>
+    <string name="advice4">На перекусы должно приходиться 25% от суточной нормы калорий</string>
+    <string name="advice5">Старайтесь включать в рацион больше овощей и фруктов</string>
+    <string name="advice6">Промежутки между приёмами пищи должны составлять 4–5 часов</string>
+    <string name="advice7">Пейте больше воды</string>
+    <string name="advice8">В течение дня должно быть запланировано 2 перекуса</string>
+    <string name="advice9">Вечером нужно потреблять меньше углеводов</string>
+    <string name="advice10">Постарайтесь отказаться от сладкого</string>
+
+    <string name="sendsNotification">Канал для отправки уведомлений о приёмах пищи</string>
+
 </resources>

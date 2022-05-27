@@ -1,10 +1,8 @@
 package com.example.project;
 
 import java.io.Serializable;
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Objects;
-
+//Класс для базы данных
 public class Days implements Serializable {
     private long id;
     private int kcal;

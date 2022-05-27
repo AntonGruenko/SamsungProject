@@ -43,7 +43,6 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/mplus1p_medium"
         android:gravity="center"
-        android:text="@string/caloriesNum"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -53,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/caloriesNum"
         android:layout_marginTop="32dp"
-        android:layout_toLeftOf="@id/fats"
+        android:layout_toStartOf="@id/fats"
         android:fontFamily="@font/mplus1p_regular"
         android:gravity="center"
         android:text="@string/proteins"
@@ -74,7 +73,7 @@
         android:id="@+id/carbohydrates"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/fats"
+        android:layout_toEndOf="@id/fats"
         android:layout_below="@id/caloriesNum"
         android:layout_marginTop="32dp"
         android:text="@string/carbohydrates"
@@ -82,18 +81,18 @@
         android:gravity="center"
         android:textSize="20sp"
         android:fontFamily="@font/mplus1p_regular"/>
+
     <TextView
         android:id="@+id/proteinsNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/fatsNum"
         android:layout_below="@id/proteins"
         android:layout_marginTop="16dp"
-        android:text="@string/proteinsNum"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:layout_toStartOf="@id/fatsNum"
+        android:fontFamily="@font/mplus1p_medium"
         android:gravity="center"
-        android:fontFamily="@font/mplus1p_medium"/>
+        android:textColor="@color/black"
+        android:textSize="20sp" />
     <TextView
         android:id="@+id/fatsNum"
         android:layout_width="wrap_content"
@@ -101,7 +100,6 @@
         android:layout_below="@id/fats"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
-        android:text="@string/fatsNum"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:fontFamily="@font/mplus1p_medium"/>
@@ -109,10 +107,9 @@
         android:id="@+id/carbohydratesNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/fatsNum"
+        android:layout_toEndOf="@id/fatsNum"
         android:layout_below="@id/carbohydrates"
         android:layout_marginTop="16dp"
-        android:text="@string/carbohydratesNum"
         android:textColor="@color/black"
         android:gravity="center"
         android:textSize="20sp"
@@ -134,18 +131,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/glasses"
         android:layout_marginTop="16dp"
-        android:text="@string/glassesNum"
         android:textColor="@color/black"
         android:gravity="center"
         android:textSize="20sp"
         android:fontFamily="@font/mplus1p_medium"/>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button7"
         style="@style/buttonStyle"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        app:cornerRadius="45dp"
-        app:strokeWidth="1dp"/>
-
+        app:cornerRadius="45dp" />
 
 </RelativeLayout>

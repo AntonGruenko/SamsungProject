@@ -7,30 +7,28 @@
     android:background="@color/green_light"
     tools:context=".WeightActivity">
 
-
     <TextView
         android:id="@+id/text1"
         style="@style/headStyle"
-        android:text="@string/ennter_your_weight" />
+        android:text="@string/enterYourWeight" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filledTextField_Weight"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-
         android:layout_centerVertical="true"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidth="1dp"
-        app:hintTextColor="@color/black">
+        app:hintTextColor="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_Weight"
-            android:layout_width="100dp"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mplus1p_regular"
-            android:gravity="left"
+            android:gravity="start"
             android:hint="@string/kg"
             android:inputType="numberDecimal"
             android:maxLength="3"
@@ -38,12 +36,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button3"
-        style="@style/buttonStyle"
+        android:id="@+id/button_next"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:cornerRadius="45dp"
-        app:strokeWidth="1dp" />
+        style="@style/buttonStyle"/>
 
 
 </RelativeLayout>

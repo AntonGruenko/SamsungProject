@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+//База данных с информацией о продуктах
 public class ProductsDatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "productsInfo.db";
     private static String DB_PATH = "";

@@ -8,18 +8,14 @@
     tools:context=".StartActivity">
 
     <TextView
-        android:id="@+id/text1"
         style="@style/headStyle"
         android:gravity="center"
         android:text="@string/welcome" />
 
     <TextView
-        android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:fontFamily="@font/mplus1p_regular"
         android:gravity="center"
         android:text="@string/introduction"
@@ -28,18 +24,10 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
+        android:id="@+id/button_next"
         style="@style/buttonStyle"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        app:cornerRadius="45dp"
-        app:strokeWidth="1dp" />
+        app:cornerRadius="45dp" />
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text2">
-
-    </FrameLayout>
 </RelativeLayout>

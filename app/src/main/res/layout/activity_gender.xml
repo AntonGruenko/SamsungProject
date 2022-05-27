@@ -4,10 +4,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/green_light">
+
     <TextView
         style="@style/headStyle"
         android:text="@string/gender"
         />
+
     <RadioGroup
         android:id="@+id/genderRadio"
         android:layout_width="wrap_content"
@@ -15,7 +17,8 @@
         android:orientation="vertical"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
-        <RadioButton android:id="@+id/male"
+        <RadioButton
+            android:id="@+id/male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/male"
@@ -23,7 +26,8 @@
             android:fontFamily="@font/mplus1p_regular"
             android:textColor="@color/black"
             android:buttonTint="@color/green_dark"/>
-        <RadioButton android:id="@+id/female"
+        <RadioButton
+            android:id="@+id/female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/female"
@@ -34,12 +38,11 @@
     </RadioGroup>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button4"
+        android:id="@+id/button_next"
         style="@style/buttonStyle"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        app:cornerRadius="45dp"
-        app:strokeWidth="1dp" />
+        app:cornerRadius="45dp" />
 
 
 </RelativeLayout>

@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,26 +25,12 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class UserFragment extends Fragment {
     private static final String SETTINGS = "SharedPreferences";
-    private Database db;
     private static final long DAY_IN_MILLIS = 86400000;
-
-    private BarChart chart;
-    private TextView averageKcal;
-
-    private ArrayList<BarEntry> barEntries;
-    private ArrayList<String> labels;
-    private ArrayList<Long> dates = new ArrayList<>();
-    private BarDataSet barDataSet;
-    private Description description;
-    private BarData barData;
-    private XAxis xAxis;
-    private LimitLine ll;
-
-    private int[] colorArray;
-
+    private final ArrayList<Long> dates = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,17 +41,18 @@ public class UserFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_user, container, false);
-        chart = v.findViewById(R.id.chart);
-        averageKcal = v.findViewById(R.id.average);
+        BarChart chart = v.findViewById(R.id.chart);
+        TextView averageKcal = v.findViewById(R.id.average);
 
-        barEntries = new ArrayList<>();
-        labels = new ArrayList<>();
-        db = new Database(getActivity().getApplicationContext());
-        colorArray = new int[7];
+        ArrayList<BarEntry> barEntries = new ArrayList<>();
+        ArrayList<String> labels = new ArrayList<>();
+        Database db = new Database(getActivity().getApplicationContext());
+        int[] colorArray = new int[7];
 
         SharedPreferences sp = this.getActivity().getSharedPreferences(SETTINGS, Context.MODE_PRIVATE);
         long date = sp.getLong("date", 0);
 
+        //Заполнение столбцов цветом в соответствие с успешностью дня
         int j = 0;
         for(long i = date; i > date - 7 * DAY_IN_MILLIS; i -= DAY_IN_MILLIS) {
             if (db.select(i).isSuccessful()) {
@@ -76,33 +62,35 @@ public class UserFragment extends Fragment {
             }
             ++j;
         }
-        ll = new LimitLine(sp.getInt("kcal", 0), getString(R.string.your_limit));
+
+        LimitLine ll = new LimitLine(sp.getInt("kcal", 0), getString(R.string.your_limit));
         fillDays();
+
         for (int i = 0; i < dates.size(); i++){
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(dates.get(i));
-            String dateText = String.format("%1$td.%1$tm", calendar);
+            String dateText = String.format(Locale.ENGLISH, "%1$td.%1$tm", calendar);
             labels.add(dateText);
             int kcal = db.select(dates.get(i)).getKcal();
             barEntries.add(new BarEntry(i,kcal));
         }
 
-        barDataSet = new BarDataSet(barEntries, "");
+        BarDataSet barDataSet = new BarDataSet(barEntries, "");
         barDataSet.setColors(colorArray);
-        description = new Description();
+        Description description = new Description();
         description.setText(getString(R.string.days));
         chart.setDescription(description);
-        barData = new BarData(barDataSet);
+        BarData barData = new BarData(barDataSet);
         chart.setData(barData);
 
-        xAxis = chart.getXAxis();
+
+        XAxis xAxis = chart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(labels));
         xAxis.setPosition(XAxis.XAxisPosition.TOP);
         xAxis.setDrawGridLines(false);
         xAxis.setDrawAxisLine(false);
         xAxis.setGranularity(1f);
         xAxis.setLabelCount(dates.size());
-
         YAxis yAxis = chart.getAxisLeft();
         yAxis.addLimitLine(ll);
         chart.animateY(500);
@@ -120,7 +108,7 @@ public class UserFragment extends Fragment {
         }
 
     }
-
+    //Вычисление среднего потребления калорий за последние 7 дней
     private int getArithmeticMean(Database db, long date) throws ArithmeticException{
         int res = 0;
         int div =  0;
