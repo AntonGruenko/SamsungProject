@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.project.data.Database;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MealActivity extends Activity {
@@ -83,9 +85,9 @@ public class MealActivity extends Activity {
         Cursor cursor = productsDb.rawQuery("SELECT * FROM products ORDER BY productTitle", null);
         cursor.moveToFirst();
 
-        String[] labels = new String[95];
+        ArrayList<String> labels = new ArrayList<>();
         for(int i = 0; i < 95; i++){
-            labels[i] = cursor.getString(1);
+            labels.add(cursor.getString(1));
             cursor.moveToNext();
             if(cursor.isAfterLast())
                 break;
@@ -97,9 +99,11 @@ public class MealActivity extends Activity {
         dbDropDownMenu.setAdapter(adapter);
 
         dbDropDownMenu.setOnItemClickListener((parent, view, position, id) -> {
+            String item = (String) parent.getItemAtPosition(position);
+            int num = labels.indexOf(item);
             double coeff;
             Cursor menuCursor = productsDb.rawQuery("SELECT * FROM products ORDER BY productTitle", null);
-            menuCursor.moveToPosition(position);
+            menuCursor.moveToPosition(num);
             try {
                 coeff = Double.parseDouble(editCoefficient
                                 .getText()
